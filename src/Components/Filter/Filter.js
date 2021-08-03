@@ -23,11 +23,10 @@ class Filter extends Component {
   getProfileInfo() {
     const { profile } = this.props.user;
     const profileInfo = {
-      followers: profile.followers,
-      following: profile.following,
       repositories: profile.public_repos,
-      stars: 7,
-      overview: ""
+      overview: "",
+      projects: profile.projects,
+      packages: profile.packages
     };
     return profileInfo;
   }
@@ -69,9 +68,8 @@ class Filter extends Component {
     const dummyTabsList = [
       "Overview",
       "Repositories",
-      "Stars",
-      "Followers",
-      "Following"
+      "Projects",
+      "Packages"
     ].map(list => (
       <li key={list}>
         <a href="# ">

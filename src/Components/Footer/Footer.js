@@ -17,10 +17,7 @@ const Footer = () => {
   };
   return (
     <footer style={style}>
-      Made by{" "}
-      <a href="https://github.com/ezioda004" style={anchorStyle}>
-        ezioda004
-      </a>
+
     </footer>
   );
 };
